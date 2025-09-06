@@ -1,0 +1,13 @@
+name: go test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-go@v6
+    - name: go test
+      run: go test
